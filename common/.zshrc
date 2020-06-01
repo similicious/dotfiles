@@ -6,7 +6,6 @@ ZSH_THEME="agnoster"
 # Aliases
 alias ez="nano ~/.zshrc"
 alias hh="cd ~/"
-alias config='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Plugins
 plugins=(
