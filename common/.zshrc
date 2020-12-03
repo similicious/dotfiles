@@ -6,7 +6,7 @@ ZSH_THEME="agnoster"
 # Aliases
 alias ez="nano ~/.zshrc"
 alias hh="cd ~/"
-alias please "sudo !!"
+alias please="sudo !!"
 
 # Plugins
 plugins=(
