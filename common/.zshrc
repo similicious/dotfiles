@@ -6,7 +6,7 @@ ZSH_THEME="agnoster"
 # Aliases
 alias ez="nano ~/.zshrc"
 alias hh="cd ~/"
-alias please="sudo $(history -p !!)"
+alias please='sudo $(fc -ln -1)'
 
 # Plugins
 plugins=(
