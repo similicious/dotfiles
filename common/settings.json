@@ -33,11 +33,12 @@
         {
             // Put settings here that you want to apply to all profiles.
             "useAcrylic": true,
-            "acrylicOpacity": 0.7,
-            "colorScheme": "Solarized Dark",
+            "acrylicOpacity": 0.8,
+            "colorScheme": "One Half Dark",
             
-            // https://github.com/powerline/fonts/tree/master/Inconsolata
-            "fontFace": "Inconsolata for Powerline"
+            // https://ohmyposh.dev/docs/fonts
+            "fontFace": "MesloLGM NF",
+            "fontSize": 10
         },
         "list":
         [
