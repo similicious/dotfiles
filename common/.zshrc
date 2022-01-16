@@ -1,4 +1,4 @@
-export ZSH="/home/similicious/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Themes
 ZSH_THEME="agnoster"
