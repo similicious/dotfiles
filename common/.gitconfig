@@ -1,9 +1,9 @@
 [user]
 	name = similicious
 	email = mail@similicious.de
-	
+
 [alias]
 	lg = log --graph --oneline --decorate --branches --exclude=refs/stash --all
 
 [includeIf "gitdir:C:/Projects_Git/"]
-  path = .gitconfig-work
+	path = .gitconfig-work
