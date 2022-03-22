@@ -5,5 +5,8 @@
 [alias]
 	lg = log --graph --oneline --decorate --branches --exclude=refs/stash --all
 
+[fetch]
+    prune = true
+
 [includeIf "gitdir:C:/Projects_Git/"]
 	path = .gitconfig-work
