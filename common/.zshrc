@@ -7,6 +7,7 @@ ZSH_THEME="agnoster"
 alias ez="nano ~/.zshrc"
 alias hh="cd ~/"
 alias please='sudo $(fc -ln -1)'
+alias qr="qrencode -t ansiutf8"
 
 # Plugins
 plugins=(
