@@ -8,6 +8,9 @@ alias ez="nano ~/.zshrc"
 alias hh="cd ~/"
 alias please='sudo $(fc -ln -1)'
 alias qr="qrencode -t ansiutf8"
+alias dcu="docker-compose up -d"
+alias dcd="docker-compose down"
+alias dcl="docker-compose logs -f"
 
 # Plugins
 plugins=(
