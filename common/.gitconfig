@@ -12,4 +12,4 @@
     path = ~/.gitconfig-macos
 
 [includeIf "gitdir:/Users/s.wienecke/repos/"]
-	path = ~/.gitconfig-work
+    path = ~/.gitconfig-work
