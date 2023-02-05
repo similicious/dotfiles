@@ -1,7 +1,4 @@
-export ZSH="$HOME/.oh-my-zsh"
-
-# Themes
-ZSH_THEME="agnoster"
+source  ~/antigen.zsh
 
 # Aliases
 alias ez="nano ~/.zshrc"
@@ -12,25 +9,15 @@ alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 alias dcl="docker-compose logs -f"
 
-# Plugins
-plugins=(
-	git
-	bundler
-	dotenv
-	rake
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	zsh-autosuggestions
-	z
-	last-working-dir
-	npm
-	sudo
-	extract
-	history
-	web-search
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	zsh-syntax-highlighting
-	ssh-agent
-	nvm
-)
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
 
-source $ZSH/oh-my-zsh.sh
+antigen bundle git
+antigen bundle ssh-agent
+antigen bundle history
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme af-magic
+
+antigen apply
