@@ -8,5 +8,6 @@
 - Create a `~./.zshenv` file with the following content
 
 ```
-export ZDOTDIR=~/personal/dotfiles/zsh`
+export DOTDIR=~/personal/dotfiles
+export ZDOTDIR=~/personal/dotfiles/zsh
 ```

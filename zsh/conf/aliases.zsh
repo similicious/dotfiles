@@ -14,3 +14,6 @@ alias cat="bat"
 
 # reload zsh config
 alias rl="source ~/.zshrc"
+
+# dotfiles config
+alias config="git -C $DOTFILES_DIR"
