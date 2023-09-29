@@ -1,0 +1,16 @@
+{
+  "workbench.colorTheme": "GitHub Dark",
+  "editor.fontFamily": "'Fira Code Retina', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.ignoreRebaseWarning": true,
+  "openInGitHub.providerType": "github",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1685105312517,
+  "typescript.updateImportsOnFileMove.enabled": "never"
+}
