@@ -25,3 +25,6 @@ zsh-users/zsh-completions
 
 # adds syntax highlighting to the prompt
 zsh-users/zsh-syntax-highlighting
+
+# adds syntax highlighting to the prompt
+ohmyzsh/ohmyzsh path:plugins/sudo

@@ -1,6 +1,5 @@
 # convenience
 alias ez="code $ZDOTDIR/.zshrc"
-alias please='sudo $(fc -ln -1)'
 
 # generate a qr code for the given string
 alias qr="qrencode -t ansiutf8"
