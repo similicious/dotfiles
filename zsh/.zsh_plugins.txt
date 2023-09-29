@@ -1,0 +1,27 @@
+# omz libs needed for some plugins and themes
+ohmyzsh/ohmyzsh path:lib
+
+# --------------------
+# theme
+# --------------------
+# af-magic theme
+ohmyzsh/ohmyzsh path:themes/af-magic.zsh-theme
+
+# --------------------
+# plugins
+# --------------------
+
+# loads ssh keys using ssh-agent
+ohmyzsh/ohmyzsh path:plugins/ssh-agent
+
+# fzf integration
+unixorn/fzf-zsh-plugin
+
+# hints for previously executed commands
+zsh-users/zsh-autosuggestions
+
+# adds more completion scripts
+zsh-users/zsh-completions
+
+# adds syntax highlighting to the prompt
+zsh-users/zsh-syntax-highlighting
