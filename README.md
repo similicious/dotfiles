@@ -18,8 +18,16 @@ export ZDOTDIR=~/dotfiles/zsh
 
 ### VSCode
 
-Mac
+```
+# Mac
+ln -s $DOTFILES_DIR/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+```
+
+### Git
 
 ```
-ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s $DOTFILES_DIR/git/.gitconfig ~/.gitconfig
+
+# on a work computer
+ln -s $DOTFILES_DIR/git/.gitconfig-work ~/.gitconfig-work
 ```
