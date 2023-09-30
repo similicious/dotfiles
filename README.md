@@ -8,8 +8,12 @@
 - Create a `~./.zshenv` file with the following content
 
 ```
-export DOTDIR=~/personal/dotfiles
-export ZDOTDIR=~/personal/dotfiles/zsh
+export DOTFILES_DIR=~/dotfiles
+export ZDOTDIR=~/dotfiles/zsh
+
+# Paths can be added like this
+# path+=('/home/similicious/.local/bin')
+# export PATH
 ```
 
 ### VSCode
