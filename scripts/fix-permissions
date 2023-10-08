@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Checking if the script is run as root user
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root."
+    exit 1
+fi
+
+# Checking if the required arguments are provided
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <directory> <username>"
+    exit 1
+fi
+
+# Checking if the directory exists
+if [ ! -d "$1" ]; then
+    echo "Directory '$1' does not exist."
+    exit 1
+fi
+
+# Changing owner of the directory recursively
+chown -R $2:$2 "$1"
+
+# Setting file permissions recursively to 755
+find "$1" -type f -exec chmod 644 {} \;
+
+# Setting directory permissions recursively to 644
+find "$1" -type d -exec chmod 755 {} \;
+
+echo "Ownership and permissions set successfully."
