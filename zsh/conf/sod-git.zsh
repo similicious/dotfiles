@@ -7,3 +7,6 @@ alias rebase='git-fetch-main; EDITOR=true git rebase $SOD_GIT_MAIN --autosquash 
 alias merge='git-fetch-main; git merge $SOD_GIT_MAIN'
 alias pm='not-main && (merge && push)'
 alias pr='not-main && (rebase && push)'
+
+# remove branches which have been merged
+alias git-rm-orphans='git fetch -p && git branch -vv | grep gone | cut -d' ' -f 3 | grep . | xargs git branch -D'
