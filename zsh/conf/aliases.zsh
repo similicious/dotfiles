@@ -1,5 +1,5 @@
 # convenience
-alias ez="code $ZDOTDIR"
+alias ez="code $DOTFILES_DIR"
 
 # generate a qr code for the given string
 alias qr="qrencode -t ansiutf8"
