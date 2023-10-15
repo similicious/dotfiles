@@ -1,6 +1,6 @@
-
+#!/bin/bash
 # Source directory (the directory you want to back up)
-source_dir="/mnt/storage/data"
+source_dir="/mnt/storage/data/"
 
 # Destination directory (where you want to store the backup)
 dest_dir="/mnt/wd-backup/data"
@@ -13,19 +13,23 @@ log_file="/mnt/wd-backup/data.log"
 # - trailing slash matches directories
 excludes="
   --exclude=node_modules/ \
-  --exclude=/appdata-nvme/ \
-  --exclude=/Downloads/ \
-  --exclude=thumbs.db \
+  --exclude=Downloads/ \
+  --exclude=thumbs.db  \
   --exclude=desktop.ini \
+  --exclude=.DS_Store \
+  --exclude=._.DS_Store
 "
 
 # Rsync options:
 # -a: Archive mode (preserves permissions, ownership, timestamps, etc.)
 # -v: Verbose mode (to see progress during the backup)
 # --delete: Delete extraneous files in the destination directory
-rsync_options="-av --delete $excludes"
+# --delete-exclude: Delete extraneous files in the destination directory which are excluded using --exclude
+rsync_options="-av --delete --delete-excluded $excludes"
 
 # Perform the backup and log the output to the file
+echo Running command:
+echo rsync $rsync_options "$source_dir" "$dest_dir"
 rsync $rsync_options "$source_dir" "$dest_dir" 2>&1 | tee -a "$log_file"
 
 # Check the exit status of rsync
