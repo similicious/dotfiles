@@ -1,12 +1,22 @@
 #!/bin/bash
+
+# Checking if the script is run as root user
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root."
+    exit 1
+fi
+
+# Mount external hdd
+sudo mount /dev/disk/by-id/usb-Intenso_USB_3.0_device_904000000000000014B2-0:0-part1 /mnt/st-backup
+
 # Source directory (the directory you want to back up)
 source_dir="/mnt/storage/data/"
 
 # Destination directory (where you want to store the backup)
-dest_dir="/mnt/wd-backup/data"
+dest_dir="/mnt/st-backup/data"
 
 # Log file to record the backup process
-log_file="/mnt/wd-backup/data.log"
+log_file="/mnt/st-backup/data.log"
 
 # Define the excludes in a variable (use a backslash at the end of each line to continue)
 # - leading slash forces rsync to resolve the exclude from the root of the source dir
@@ -25,16 +35,21 @@ excludes="
 # -v: Verbose mode (to see progress during the backup)
 # --delete: Delete extraneous files in the destination directory
 # --delete-exclude: Delete extraneous files in the destination directory which are excluded using --exclude
-rsync_options="-av --delete --delete-excluded $excludes"
+rsync_options="-av --delete --delete-excluded $excludes --info=progress2"
 
 # Perform the backup and log the output to the file
 echo Running command:
 echo rsync $rsync_options "$source_dir" "$dest_dir"
 rsync $rsync_options "$source_dir" "$dest_dir" 2>&1 | tee -a "$log_file"
 
+# Mount external hdd
+sudo umount /mnt/st-backup
+
 # Check the exit status of rsync
 if [ $? -eq 0 ]; then
+  curl -d "🖥️ ✅ Backup successful" ntfy.sh/rSAfFfD2XnaC7dm2
   echo "Backup completed successfully."
 else
+  curl -d "🖥️ ❌ Backup failed" ntfy.sh/rSAfFfD2XnaC7dm2
   echo "Backup failed. Check the log file: $log_file"
 fi
