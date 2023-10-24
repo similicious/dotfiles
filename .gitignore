@@ -3,3 +3,4 @@
 .zsh_plugins.zsh
 .zcompdump
 .zcompcache
+.zsh_sessions
