@@ -13,7 +13,7 @@ alias dcl="docker-compose logs -f"
 alias cat="bat"
 
 # reload zsh config
-alias rl="source ~/.zshrc"
+alias rl="source ~/.zshenv && source $ZDOTDIR/.zshrc"
 
 # dotfiles config
 alias config="git -C $DOTFILES_DIR"
