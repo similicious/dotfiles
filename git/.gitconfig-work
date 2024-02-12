@@ -1,3 +1,6 @@
 [user]
 	name = Simon Wienecke
 	email = s.wienecke@rebuy.com
+
+[core]
+	editor = code --wait
