@@ -4,6 +4,7 @@
 
 [alias]
 	lg = log --graph --oneline --decorate --branches --exclude=refs/stash --all
+	staash = stash -all
 
 [fetch]
     prune = true
