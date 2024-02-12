@@ -27,6 +27,7 @@ ln -s $DOTFILES_DIR/vscode/settings.json ~/Library/Application\ Support/Code/Use
 
 ```
 ln -s $DOTFILES_DIR/git/.gitconfig ~/.gitconfig
+ln -s $DOTFILES_DIR/git/.gitconfig-untracked ~/.gitconfig-untracked
 
 # on a work computer
 ln -s $DOTFILES_DIR/git/.gitconfig-work ~/.gitconfig-work

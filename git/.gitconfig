@@ -12,5 +12,8 @@
 [pull]
 	rebase = true
 
+[include]
+    path = ~/.gitconfig-untracked
+
 [includeIf "gitdir:/Users/s.wienecke/repos/"]
     path = ~/.gitconfig-work

@@ -4,3 +4,4 @@
 .zcompdump
 .zcompcache
 .zsh_sessions
+git/.gitconfig-untracked
