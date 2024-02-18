@@ -1,24 +1,16 @@
 #!/bin/bash
 
 container_name=$1
-shell=$2
+shell=${2:-bash}  # If $2 is empty, default to "bash"
 user=$3
 
 if [ -z "$container_name" ]; then
-    echo "Usage: $0 <container_name> [shell] [user]"
+    echo "Usage: docker-sh <container_name> [shell] [user]"
     exit 1
 fi
 
 if [ -z "$user" ]; then
-    if [ -z "$shell" ]; then
-        docker exec -it "$container_name" bash
-    else
-        docker exec -it "$container_name" "$shell"
-    fi
+    docker exec -it "$container_name" "$shell"
 else
-    if [ -z "$shell" ]; then
-        docker exec -it -u "$user" "$container_name" bash
-    else
-        docker exec -it -u "$user" "$container_name" "$shell"
-    fi
+    docker exec -it -u "$user" "$container_name" "$shell"
 fi
