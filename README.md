@@ -2,6 +2,12 @@
 
 ## Setup
 
+### Create and populate secrets
+
+```
+cp secrets.sample secrets
+```
+
 ### ZSH
 
 - Clone this repository

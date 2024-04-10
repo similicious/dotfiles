@@ -6,3 +6,4 @@
 .zsh_sessions
 git/.gitconfig-untracked
 zsh/conf/untracked.zsh
+secrets

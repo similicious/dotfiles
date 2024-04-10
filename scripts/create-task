@@ -1,0 +1,28 @@
+#!/bin/bash
+
+source $DOTFILES_DIR/secrets
+
+# Check if task title has been provided as argument
+if [ -z "$1" ]
+  then
+    echo "No argument provided. Please provide the task title as an argument."
+    exit 1
+fi
+
+# Set API endpoint, JWT Token and project id
+PROJECT_ID=1  # please replace this id with your project id
+API_ENDPOINT="${SECRETS_VIKUNJA_API_HOST}/api/v1/projects/${PROJECT_ID}/tasks"
+
+# The task title is the first script argument
+TASK_TITLE="$1"
+
+# Send POST request to the API endpoint 
+curl -X PUT \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Bearer ${SECRETS_VIKUNJA_API_TOKEN}" \
+     --data '{
+            "title": "'"${TASK_TITLE}"'"
+         }' \
+     "${API_ENDPOINT}"
+
+exit 0

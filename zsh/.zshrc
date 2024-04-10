@@ -11,3 +11,5 @@ autoload -Uz promptinit && promptinit
 autoload -Uz compinit; compinit
 source ${ZDOTDIR}/.antidote/antidote.zsh
 antidote load
+# bun completions
+[ -s "/Users/s.wienecke/.bun/_bun" ] && source "/Users/s.wienecke/.bun/_bun"
