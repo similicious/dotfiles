@@ -14,6 +14,7 @@ cp secrets.sample secrets
 - Create a `~./.zshenv` file with the following content
 
 ```
+export REPOS_DIR=~/repos
 export DOTFILES_DIR=~/dotfiles
 export ZDOTDIR=~/dotfiles/zsh
 
