@@ -17,6 +17,8 @@ if [[ "$(hostname)" == "rebuy-s.wienecke" ]]; then
     alias sblue="cd $WEB_PATH/blue"
     alias sgreen="cd $WEB_PATH/green"
     alias smy="cd $WEB_PATH/my"
+
+    alias wsdk="cd $WEB_PATH/web-sdk"
     
     # dns
     alias dnsfix='source $DOTFILES_DIR/secrets && sudo mv "$( [ -f /etc/resolver/$SECRETS_DOMAIN ] && echo /etc/resolver/$SECRETS_DOMAIN || echo /etc/resolver/${SECRETS_DOMAIN}.bak)" "$( [ -f /etc/resolver/$SECRETS_DOMAIN ] && echo /etc/resolver/${SECRETS_DOMAIN}.bak || echo /etc/resolver/$SECRETS_DOMAIN)" &&  sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder && ls /etc/resolver'
