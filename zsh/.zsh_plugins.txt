@@ -26,5 +26,5 @@ zsh-users/zsh-completions
 # adds syntax highlighting to the prompt
 zsh-users/zsh-syntax-highlighting
 
-# adds syntax highlighting to the prompt
+# prepends sudo to a command when [Esc] [Esc] is pressed
 ohmyzsh/ohmyzsh path:plugins/sudo
