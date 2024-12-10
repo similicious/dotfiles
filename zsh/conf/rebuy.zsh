@@ -1,5 +1,5 @@
-# only add this
-if [[ "$(hostname)" == "rebuy-s.wienecke" ]]; then
+# only add this on work machine
+if [[ "$(hostname)" == "s-wienecke-rebuy" ]]; then
 
     # regrant aliases
     alias regrant="~/repos/vagrant/regrant"
@@ -25,5 +25,16 @@ if [[ "$(hostname)" == "rebuy-s.wienecke" ]]; then
 
     # regrant completions
     fpath=(~/.rebuy/completion $fpath)
+
+    # open in intellij
+    alias idea='open -na "IntelliJ IDEA.app"'
+
+    cs() {
+        colima stop
+        sudo rm -rf /var/run/docker.sock
+        sudo ln -s "$HOME/.colima/docker.sock" /var/run/docker.sock
+        colima start --disk 10
+    }
+
 fi
 
