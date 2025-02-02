@@ -36,5 +36,8 @@ if [[ "$(hostname)" == "s-wienecke-rebuy" ]]; then
         colima start --disk 10
     }
 
+    #tailscale
+    alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 fi
 
