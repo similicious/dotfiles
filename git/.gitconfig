@@ -8,11 +8,39 @@
 	fetch-main = fetch origin main:main
 
 [fetch]
-    prune = true
+	prune = true
+	pruneTags = true
+	all = true
 
 [pull]
 	rebase = true
 
+[push]
+	autoSetupRemote = true
+	default = simple
+	followTags = true
+
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+
+[init]
+	defaultBranch = main
+
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = 
+	renames = true
+
+[help]
+	autocorrect = prompt
+	
 [include]
     path = ~/.gitconfig-untracked
 
