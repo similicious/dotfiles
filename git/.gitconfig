@@ -47,3 +47,7 @@
 
 [includeIf "gitdir:/Users/s.wienecke/repos/"]
     path = ~/.gitconfig-work
+
+[diff "ansible-vault"]
+textconv = ansible-vault view
+cachetextconv = false
