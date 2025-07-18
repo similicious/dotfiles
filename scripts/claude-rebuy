@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export ANTHROPIC_BASE_URL=https://llm-gateway.production.rebuy.cloud/passthrough/anthropic
+claude "$@"

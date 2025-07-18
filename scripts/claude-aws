@@ -1,9 +1,0 @@
-#!/bin/bash
-
-export AWS_PROFILE=staging
-export ANTHROPIC_MODEL='eu.anthropic.claude-3-7-sonnet-20250219-v1:0'
-export ANTHROPIC_SMALL_FAST_MODEL='eu.anthropic.claude-3-haiku-20240307-v1:0'
-export AWS_DEFAULT_REGION=eu-west-1
-export AWS_REGION=eu-west-1
-export CLAUDE_CODE_USE_BEDROCK=1
-claude
