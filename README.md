@@ -38,6 +38,9 @@ This repository contains my personal dotfiles and configuration setup for a cons
    export DOTFILES_DIR=~/dotfiles
    export ZDOTDIR=~/dotfiles/zsh
 
+   # Uncomment to autostart tmxu
+   # export ZSH_TMUX_AUTOSTART=true
+
    # Add custom paths as needed
    # path+=('/home/user/.local/bin')
    # export PATH

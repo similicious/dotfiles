@@ -28,3 +28,9 @@ zsh-users/zsh-syntax-highlighting
 
 # prepends sudo to a command when [Esc] [Esc] is pressed
 ohmyzsh/ohmyzsh path:plugins/sudo
+
+# adds tmux aliases and starts tmux automatically
+# enable autostart with 
+# export ZSH_TMUX_AUTOSTART=true
+# ~/.zshenv
+ohmyzsh/ohmyzsh path:plugins/tmux
