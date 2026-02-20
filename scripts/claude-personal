@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source $DOTFILES_DIR/secrets
+ANTHROPIC_BASE_URL="https://openrouter.ai/api" ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY" ANTHROPIC_API_KEY="" claude
