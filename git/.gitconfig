@@ -8,6 +8,9 @@
 	fetch-main = fetch origin main:main
 	ri = rebase main --autosquash --interactive
 
+[core]
+	excludesFile = ~/.gitignore
+
 [fetch]
 	prune = true
 	pruneTags = true

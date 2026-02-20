@@ -79,6 +79,9 @@ ln -s $DOTFILES_DIR/git/.gitconfig-untracked ~/.gitconfig-untracked
 
 # Work-specific config (optional)
 ln -s $DOTFILES_DIR/git/.gitconfig-work ~/.gitconfig-work
+
+# Global .gitignore
+ln -s $DOTFILES_DIR/git/.gitignore ~/.gitignore
 ```
 
 ## 📝 License
