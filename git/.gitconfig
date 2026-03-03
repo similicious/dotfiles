@@ -44,6 +44,9 @@
 
 [help]
 	autocorrect = prompt
+
+[advice]
+	detachedHead = false
 	
 [include]
     path = ~/.gitconfig-untracked
@@ -54,3 +57,4 @@
 [diff "ansible-vault"]
 textconv = ansible-vault view
 cachetextconv = false
+
