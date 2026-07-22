@@ -13,6 +13,7 @@ if [[ "$(hostname)" == "s-wienecke-rebuy" ]]; then
     alias blue="cd $WEB_PATH/apps/blue-angular"
     alias green="cd $WEB_PATH/apps/green-angular"
     alias my="cd $WEB_PATH/apps/my-angular"
+    alias fsdk="cd $WEB_PATH/libs/frontend-sdk"
 
     alias sblue="cd $WEB_PATH/blue"
     alias sgreen="cd $WEB_PATH/green"
