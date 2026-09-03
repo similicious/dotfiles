@@ -1,0 +1,45 @@
+#!/bin/bash
+
+set -euo pipefail
+
+usage() {
+    echo "Usage: $(basename "$0") -a|-r"
+    echo "  -a  apply the DNS fix (enable the custom resolver)"
+    echo "  -r  remove the DNS fix (disable the custom resolver)"
+    exit 1
+}
+
+[ $# -eq 1 ] || usage
+
+while getopts "ar" opt; do
+    case "$opt" in
+        a) action="apply" ;;
+        r) action="remove" ;;
+        *) usage ;;
+    esac
+done
+
+source "$DOTFILES_DIR/secrets"
+
+resolver="/etc/resolver/$SECRETS_DOMAIN"
+backup="/etc/resolver/${SECRETS_DOMAIN}.bak"
+
+if [ "$action" = "apply" ]; then
+    if [ ! -f "$backup" ]; then
+        echo "Nothing to apply: $backup not found (fix may already be applied)."
+        exit 1
+    fi
+    sudo mv "$backup" "$resolver"
+    echo "DNS fix applied: $resolver enabled."
+else
+    if [ ! -f "$resolver" ]; then
+        echo "Nothing to remove: $resolver not found (fix may already be removed)."
+        exit 1
+    fi
+    sudo mv "$resolver" "$backup"
+    echo "DNS fix removed: $resolver disabled."
+fi
+
+sudo dscacheutil -flushcache
+sudo killall -HUP mDNSResponder
+echo "DNS cache flushed."
