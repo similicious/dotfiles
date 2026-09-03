@@ -11,6 +11,7 @@ alias dcl="docker-compose logs -f"
 
 # override common commands with better versions
 alias cat="bat"
+alias ls="eza"
 
 # reload zsh config
 alias rl="source ~/.zshenv && source $ZDOTDIR/.zshrc"
