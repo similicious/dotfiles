@@ -9,7 +9,17 @@ usage() {
     exit 1
 }
 
-[ $# -eq 1 ] || usage
+status() {
+    source "$DOTFILES_DIR/secrets"
+    if [ -f "/etc/resolver/$SECRETS_DOMAIN" ]; then
+        echo "DNS fix is currently applied (/etc/resolver/$SECRETS_DOMAIN enabled)."
+    else
+        echo "DNS fix is currently removed (/etc/resolver/$SECRETS_DOMAIN disabled)."
+    fi
+    usage
+}
+
+[ $# -eq 1 ] || status
 
 while getopts "ar" opt; do
     case "$opt" in
