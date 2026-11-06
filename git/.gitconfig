@@ -1,6 +1,7 @@
 [user]
 	name = similicious
 	email = mail@similicious.de
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBnbRgiwangiuXLGJh77NprwjpU+/bin1SMPV3kmlKWa
 
 [alias]
 	lg = log --graph --oneline --decorate --branches --exclude=refs/stash --all
@@ -58,3 +59,11 @@
 textconv = ansible-vault view
 cachetextconv = false
 
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
+
+[commit]
+	gpgsign = true

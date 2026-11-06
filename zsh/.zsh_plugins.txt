@@ -11,9 +11,6 @@ ohmyzsh/ohmyzsh path:themes/af-magic.zsh-theme
 # plugins
 # --------------------
 
-# loads ssh keys using ssh-agent
-ohmyzsh/ohmyzsh path:plugins/ssh-agent
-
 # fzf integration
 unixorn/fzf-zsh-plugin
 
